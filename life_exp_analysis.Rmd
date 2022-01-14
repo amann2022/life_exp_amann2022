@@ -1,0 +1,11 @@
+---
+title: "Examine Life Expectancy"
+author: "Ashley Mann"
+date: "1/13/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
