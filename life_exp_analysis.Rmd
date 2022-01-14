@@ -5,7 +5,28 @@ date: "1/13/2022"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Analysis 
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+```{r}
+data("gapminder_unfiltered")
+nrow(gapminder_unfiltered)
+```
+
+```{r}
+gapminder_unfiltered %>%
+  group_by(year) %>%
+  filter(lifeExp == max(lifeExp)) %>%
+  ungroup %>%
+  select(year, country, lifeExp) -> sumdat
 ```
 
